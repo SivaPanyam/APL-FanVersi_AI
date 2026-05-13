@@ -17,7 +17,14 @@ initFirebaseAdmin();
 import { apiLimiter, xssSanitize, hppProtect } from "./middleware/securityMiddleware.js";
 
 // Middleware
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
+    crossOriginResourcePolicy: false,
+  })
+);
 app.use(
   cors({
     origin: clientOrigin.split(",").map((o) => o.trim()),

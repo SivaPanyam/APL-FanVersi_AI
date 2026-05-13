@@ -4,6 +4,21 @@ import { Match } from "@/components/dashboard/MatchCard";
 const MOCK_MATCHES: Match[] = [
   {
     id: "1",
+    league: "IPL 2026",
+    teams: {
+      home: { name: "KKR", logo: "https://upload.wikimedia.org/wikipedia/en/4/4c/Kolkata_Knight_Riders_Logo.svg", score: 185 },
+      away: { name: "RCB", logo: "https://upload.wikimedia.org/wikipedia/en/2/2a/Royal_Challengers_Bangalore_2020.svg", score: 142 }
+    },
+    timer: "16.4 Overs",
+    quarter: "2nd Innings",
+    winProbability: 0.82,
+    momentum: 0.7,
+    aiInsight: "KKR spinners are choking the run rate. RCB needs boundaries immediately to keep the chase alive.",
+    fanCount: "124.5k",
+    status: "live"
+  },
+  {
+    id: "2",
     league: "NBA",
     teams: {
       home: { name: "Lakers", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Los_Angeles_Lakers_logo.svg", score: 104 },
@@ -15,51 +30,6 @@ const MOCK_MATCHES: Match[] = [
     momentum: 0.4,
     aiInsight: "Lakers are dominating the paint with an 84% success rate on drives. Expect a focused defensive switch from Warriors in the next play.",
     fanCount: "12.4k",
-    status: "live"
-  },
-  {
-    id: "2",
-    league: "NFL",
-    teams: {
-      home: { name: "Chiefs", logo: "https://upload.wikimedia.org/wikipedia/en/e/e1/Kansas_City_Chiefs_logo.svg", score: 24 },
-      away: { name: "Eagles", logo: "https://upload.wikimedia.org/wikipedia/en/8/8e/Philadelphia_Eagles_logo.svg", score: 21 }
-    },
-    timer: "12:10",
-    quarter: "3rd",
-    winProbability: 0.55,
-    momentum: -0.2,
-    aiInsight: "Mahomes has a 72% completion rate on long passes today. Eagles secondary is showing signs of fatigue.",
-    fanCount: "45.1k",
-    status: "live"
-  },
-  {
-    id: "3",
-    league: "Champions League",
-    teams: {
-      home: { name: "Real Madrid", logo: "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg", score: 2 },
-      away: { name: "Man City", logo: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg", score: 2 }
-    },
-    timer: "78:00",
-    quarter: "2nd Half",
-    winProbability: 0.48,
-    momentum: 0.1,
-    aiInsight: "Possession is split 50/50. Real Madrid tends to score 30% of their goals in the final 10 minutes of UCL matches.",
-    fanCount: "89k",
-    status: "live"
-  },
-  {
-    id: "4",
-    league: "NBA",
-    teams: {
-      home: { name: "Celtics", logo: "https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg", score: 112 },
-      away: { name: "Heat", logo: "https://upload.wikimedia.org/wikipedia/en/f/fb/Miami_Heat_logo.svg", score: 115 }
-    },
-    timer: "00:12",
-    quarter: "OT",
-    winProbability: 0.35,
-    momentum: -0.8,
-    aiInsight: "Heat has converted 4 out of 5 clutch shots. Celtics need a defensive stop to stay in the game.",
-    fanCount: "32k",
     status: "live"
   }
 ];

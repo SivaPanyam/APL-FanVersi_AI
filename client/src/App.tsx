@@ -17,20 +17,17 @@ export default function App() {
 
       {/* Protected App Routes with Sidebar */}
       <Route
-        path="/*"
         element={
           <ProtectedRoute>
-            <AppLayout>
-              <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/match/:id" element={<MatchDetails />} />
-                <Route path="/leaderboard" element={<Leaderboard />} />
-                <Route path="/chat" element={<FanChatPage />} />
-              </Routes>
-            </AppLayout>
+            <AppLayout />
           </ProtectedRoute>
         }
-      />
+      >
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/match/:id" element={<MatchDetails />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/chat" element={<FanChatPage />} />
+      </Route>
     </Routes>
   );
 }
