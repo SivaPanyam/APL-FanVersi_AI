@@ -1,0 +1,12 @@
+.gcloudignore
+.git
+.gitignore
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+*.log
+# Allow dist folder for monolithic deploy
+# dist/
+!client/dist/
